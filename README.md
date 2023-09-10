@@ -1,100 +1,41 @@
-# 03 JavaScript: Password Generator
+#Password Generator
 
-## Your Task
+# Steps
+## First: I set up my arrays with the characters i wanted the function to pull from, each depending on what type of character it was calling for. A total of four catagories.
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+## Second: Started set up of function generatePassword to define it.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+## Third: I set the variable of finalPassword to blank or undefined so that it would be empty until the rest of the function was able to add value to it.
 
-## User Story
+## Forth: Set variable characters to a prompt with the string how many characters?, so that i could have the ability to capture the input from the user and use it later in the function.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Fifth: Created an if statement with the conditions of character being greater or equal to 8 AND less than or equal to 128 that was the range of being between 8 and 128 was met and the user could not created passwords less than 8 characters or more than 128.
 
-## Acceptance Criteria
+## Sixth: I set up four variables each to a different confrim method. Each asking the user if they wanted that specific character as a part of their password.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Seventh: Then i set up an if statement saying if the user clicks cancel or "false" on all of the confirm methods then the rest of the function would not run and it would alert the user that they must chose at least one of those options.
 
-## Mock-Up
+## Eigth: I placed a return after the prompt to exit the function if the user decided to chose cancel on all of the confirm methods, thus making them restart the process and allowing them to make their choice.
 
-The following image shows the web application's appearance and functionality:
+## Ninth: Using a for loop i was able to let the index start out being equal to one, then had the index less than the characters value and used i++ to allow the index to go up by one until it reached the quantity of what the user had typed in for the prompt.
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+## Tenth: Set up an if statement to check the if the upper case was selected as true and have it set the final password length to be less than the character to make sure it did not exceed what the user had typed in.
 
-## Grading Requirements
+## Eleventh: I set the variable index to be equal to length of the uppercase array times the random and floor method which allows it to pull from the array and round the value of the index it calls therefor the index would line up to one of the indexs that was within the array and not be a value within two array.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Twelth: I set the variable choice1 to the uppercase index then set the final password equal to the final password plus that choice, therefor have the final password factor in the uppercase when it is generated.
 
-This Challenge is graded based on the following criteria: 
+## Thirteenth: I repeated steps ten through twelve for the lowercase, numbers, and special characters to have the function factor in those arrays as well as long as they had been chosen by the user to be factored in.
 
-### Technical Acceptance Criteria: 40%
+## Forteenth: I created an else statement near the end of the characters if statement of checking the number of characters to alert the user to enter a valid number within the range of 8 and 128. Just incase the user chose a number under the excepted value or over it and added a return so that it would end the function if the characters statement wasnt satisfied and didn't continue to try and run the rest of the function.
 
-* Satisfies all of the preceding acceptance criteria.
+## Finally I ended the original function of generate password with a return and final password to have it end the function and then generate the password to the user.
 
-### Deployment: 32%
+## The function write password was already given to me. It has the variable password equal to the function generate password which allows that function to call onto the generate function. It also set the password text equal to document query slector with the id of password which tells the where to put the text once it is generated within the html (where at on the page). Lastly they had the password text value equal to password to that they were connected and caused the generate password function to run.
 
-* Application deployed at live URL.
+## They also included generatebtn attached to an event listener with the parameters of click and write password. This tells the page that when the user clicks on the generate button, "first part of parameter", it will call the function write password, "second part of parameter", therefor starting the whole chain of function calling and if statements.
 
-* Application loads with no errors.
+# Special Thanks and what i learned
 
-* Application GitHub URL submitted.
+## Thank you to Phillip Loy, during our tutor session, for helping me understand hwat parts of my code was heading in the write direction and where i needed to move things to get the functions and if statements working. Also for subtly hinting at what i should do and waiting on it to make since to me therefor allowing me to learn even more and understand how to navigate the functions, variables, and if else statements.
 
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
