@@ -37,5 +37,5 @@
 
 # Special Thanks and what i learned
 
-## Thank you to Phillip Loy, during our tutor session, for helping me understand hwat parts of my code was heading in the write direction and where i needed to move things to get the functions and if statements working. Also for subtly hinting at what i should do and waiting on it to make since to me therefor allowing me to learn even more and understand how to navigate the functions, variables, and if else statements.
+## Thank you to Phillip Loy, during our tutor session, for helping me understand what parts of my code was heading in the write direction and where i needed to move things to get the functions and if statements working. Also for subtly hinting at what i should do and waiting on it to make since to me therefor allowing me to learn even more and understand how to navigate the functions, variables, and if else statements.
 
