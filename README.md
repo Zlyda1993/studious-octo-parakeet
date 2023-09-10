@@ -1,4 +1,4 @@
-#Password Generator
+# Password Generator
 
 # Steps
 ## First: I set up my arrays with the characters i wanted the function to pull from, each depending on what type of character it was calling for. A total of four catagories.
